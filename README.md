@@ -4,11 +4,14 @@
 
 A page here is a rigid box, 176 by 250 millimetres, which is B5. The same CSS drives the
 screen and the print, so what you are looking at is what comes out of the printer. You
-write one concept per page, an AI lays it out and draws the diagram, and a command
-wraps the pages in a cover, a contents, part dividers and an index and turns the whole
+write one concept per page, an AI lays it out and draws the diagram, and one command
+wraps the pages in a cover, a contents, part dividers and an index, then turns the whole
 thing into a PDF.
 
 There is no builder UI and nothing to sign up for. The canvas is the guarantee.
+
+**New here? Read [the guide](GUIDE.md).** It goes from an empty folder to a printable
+book in one sitting.
 
 ---
 
@@ -17,17 +20,32 @@ There is no builder UI and nothing to sign up for. The canvas is the guarantee.
 ![Ten finished pages from the showcase book: resting meat, the bloom, companion planting, packing cubes, golden hour, progressive overload, spaced repetition, the fork, the emergency fund, circuit breaker.](books/showcase/showcase-pages.png)
 
 Ten pages, ten subjects, one engine. Cooking, coffee, gardening, travel, photography,
-fitness, language, chess, money, code. Five carry a photograph because the subject is
-physical; five carry a diagram because the subject is a mechanism. They are all in
-[`books/showcase/`](books/showcase/), and none of them is a mockup: that is the actual
-output, and the PDF is the same thing again.
+fitness, language, chess, money, code. None of them is a mockup: that is the actual
+output, it is all in [`books/showcase/`](books/showcase/), and the PDF is the same thing
+again.
+
+### One page, close up
+
+![Two pages side by side. On the left, a photo page about resting meat. On the right, a diagram page about circuit breakers.](docs/images/page-photo-and-diagram.png)
+
+Five of the ten carry a **photograph**, because the thing being taught is physical. Five
+carry an **SVG diagram**, because the thing being taught is a mechanism. Both bands are
+the same height, so the page below them is laid out identically either way.
 
 Same page shape every time. Same colour meanings every time: indigo is the thing being
 taught, teal is the good outcome, red is the mistake, amber is the thing worth
 protecting. Learn them on page one and by page forty you are reading the picture before
 you read the paragraph.
 
-Build it yourself and look: `npm run build -- books/showcase`, then open `book.html`.
+### And the parts you do not write
+
+![The four generated pages: a cover, a contents with real page numbers, a part divider, and an alphabetical index.](docs/images/generated-pages.png)
+
+The cover, the copyright page, the contents **with real page numbers**, a divider in
+front of every part, and an alphabetical index. One page counter runs through all of it,
+so the number printed on page 40 is genuinely page 40 of the PDF. The contents and the
+index paginate themselves as the book grows, and they are recomputed on every build, so
+a page number can never go stale.
 
 ---
 
@@ -76,6 +94,9 @@ draws the diagram as SVG, and checks that it fits. Rebuild, and it is in the boo
 No agent? Copy a `<section class="sheet bb">` out of the showcase and write it by hand.
 Nothing here needs an AI. It is just faster with one.
 
+[The guide](GUIDE.md) walks through all of this properly, including `book.json` field by
+field, the markup of a page, and what to do when something breaks.
+
 ---
 
 ## The loop, honestly
@@ -110,7 +131,7 @@ book nobody checked.
 The vocabulary is small on purpose: cards, arrows, numbered badges, a key line, a dashed
 boundary. The shape changes with the idea. A fork, a timeline, a before and after, a
 tunnel. Full catalogue in
-[`.claude/skills/block/references/diagram-system.md`](.claude/skills/block/references/diagram-system.md).
+[`diagram-system.md`](.claude/skills/block/references/diagram-system.md).
 
 ## Photos, when a picture teaches better
 
@@ -154,13 +175,15 @@ npm run build -- books/showcase --edition free    # -> book-free.html
 ```
 
 Same pages, a shorter book, no second copy to keep in sync. Write the page once and let
-it be the page you sell, the post you publish, and the page in the free edition.
+it be three things: the page you sell, the post you publish the day you write it, and the
+page in the free edition you give away.
 
 ---
 
 ## What is where
 
 ```
+GUIDE.md                start here
 engine/
   AUTHORING.md          the one rule, and how the canvas works
   sheet.css             the rigid page frame. read this one.
@@ -184,6 +207,21 @@ books/
 - **One concept per page.** If it needs two pages, it is two concepts.
 
 ---
+
+## Books made with this
+
+I built this engine for my own books, and these are the ones it produced. They are also
+the honest answer to "does this actually work on a real book".
+
+- **[Vibe Engineering Blocks, the free edition](https://learnwithhasan.com/blocks/?utm_source=github&utm_medium=referral&utm_campaign=blocks&utm_content=paper-engine)**
+  — 47 pages, free. One concept per page, exactly like the showcase. The fastest way to
+  see what a finished book off this engine reads like.
+- **[Vibe Engineering Blocks, the full edition](https://learnwithhasan.com/books/vibe-engineering-blocks-full-edition/?utm_source=github&utm_medium=referral&utm_campaign=blocks&utm_content=paper-engine)**
+  — the paid one. Same engine, more pages.
+
+<!-- TODO(hasan): add the video link here the day it goes public, as a third bullet:
+- **[<video title>](https://youtu.be/<id>)** — the whole thing built start to finish.
+-->
 
 ## Licence
 

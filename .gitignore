@@ -11,4 +11,9 @@ node_modules/
 # Regenerable output. The assembled book.html IS committed (so you can read a
 # book on GitHub without building it); the heavy renders are not.
 *.pdf
-page*.png
+
+# shot.mjs writes page1.png, page2.png ... into the book's own folder by default.
+# Scoped to books/ on purpose: a bare `page*.png` would also swallow documentation
+# images like docs/images/page-anatomy.png, silently, and break the README on GitHub.
+books/**/page*.png
+/page*.png
