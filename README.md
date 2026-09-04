@@ -14,15 +14,13 @@ There is no builder UI and nothing to sign up for. The canvas is the guarantee.
 
 ## What it makes
 
-Ten pages from ten different subjects, all built by this engine, all in
-[`books/showcase/`](books/showcase/):
+![Ten finished pages from the showcase book: resting meat, the bloom, companion planting, packing cubes, golden hour, progressive overload, spaced repetition, the fork, the emergency fund, circuit breaker.](books/showcase/showcase-pages.png)
 
-| | | |
-|---|---|---|
-| **Resting meat** · cooking | **The bloom** · coffee | **Companion planting** · gardening |
-| **Packing cubes** · travel | **Golden hour** · photography | **Progressive overload** · fitness |
-| **Spaced repetition** · language | **The fork** · chess | **The emergency fund** · money |
-| **Circuit breaker** · code | | |
+Ten pages, ten subjects, one engine. Cooking, coffee, gardening, travel, photography,
+fitness, language, chess, money, code. Five carry a photograph because the subject is
+physical; five carry a diagram because the subject is a mechanism. They are all in
+[`books/showcase/`](books/showcase/), and none of them is a mockup: that is the actual
+output, and the PDF is the same thing again.
 
 Same page shape every time. Same colour meanings every time: indigo is the thing being
 taught, teal is the good outcome, red is the mistake, amber is the thing worth
