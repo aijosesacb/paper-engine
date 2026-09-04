@@ -1,0 +1,14 @@
+# Node deps for the Playwright tools.
+node_modules/
+
+# Local secrets (only needed for `gen-image.mjs --provider gemini`). Never commit.
+.env
+
+# Editor settings
+.vscode/
+.idea/
+
+# Regenerable output. The assembled book.html IS committed (so you can read a
+# book on GitHub without building it); the heavy renders are not.
+*.pdf
+page*.png

@@ -1,0 +1,17 @@
+{
+  "name": "paper-engine",
+  "version": "1.0.0",
+  "description": "Write one page at a time. Get a real book. A strict B5 page engine for AI-authored books.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node engine/tools/build-book.mjs",
+    "check": "node engine/tools/check.mjs",
+    "shot": "node engine/tools/shot.mjs",
+    "export": "node engine/tools/export.mjs",
+    "image": "node engine/tools/gen-image.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}
