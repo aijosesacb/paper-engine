@@ -219,9 +219,10 @@ the honest answer to "does this actually work on a real book".
 - **[Vibe Engineering Blocks, the full edition](https://learnwithhasan.com/books/vibe-engineering-blocks-full-edition/?utm_source=github&utm_medium=referral&utm_campaign=blocks&utm_content=paper-engine)**
   — the paid one. Same engine, more pages.
 
-<!-- TODO(hasan): add the video link here the day it goes public, as a third bullet:
-- **[<video title>](https://youtu.be/<id>)** — the whole thing built start to finish.
--->
+And there is a video walking through the whole thing:
+
+- **[Watch this engine get built and used, start to finish](https://www.youtube.com/watch?v=EkniwM6Av8E)**
+  — how the pages, the diagrams and the book come together, and what it still takes to do it well.
 
 ## Licence
 
