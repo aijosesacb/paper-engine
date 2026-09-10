@@ -153,6 +153,17 @@ const B = {
   unit: book.unit || 'blocks',            // what you call a page, in printed copy
   unitOne: book.unitSingular || (book.unit || 'blocks').replace(/s$/, ''),
 };
+const L = {
+  contents: 'Contents',
+  index: 'Index',
+  partOf: 'Part {n} of {total}',
+  partPrefix: 'Part',
+  inThisPart: 'In this part',
+  ...(book.labels || {}),
+};
+const partOfLabel = (n, total) =>
+  L.partOf.replaceAll('{n}', String(n)).replaceAll('{total}', String(total));
+const partPrefixLabel = (n, name) => `${L.partPrefix} ${n} · ${name}`;
 const countWord = (n) => `${n} ${n === 1 ? B.unitOne : B.unit}`;
 const coverCfg = book.cover || {};
 const copyCfg = book.copyright || {};
@@ -233,7 +244,7 @@ const dividerSection = (p, i) => {
       <div class="in">
         <div class="gp-top">
           <div class="gp-tab"></div>
-          <span class="gp-pill">Part ${i + 1} of ${parts.length}</span>
+          <span class="gp-pill">${esc(partOfLabel(i + 1, parts.length))}</span>
         </div>
         <div class="dv-mid">
           ${p.eyebrow ? `<div class="dv-eyebrow">${esc(p.eyebrow)}</div>` : ''}
@@ -241,7 +252,7 @@ const dividerSection = (p, i) => {
           <h2 class="dv-name">${esc(p.name)}</h2>
           ${p.why ? `<p class="dv-why">${esc(p.why)}</p>` : ''}
           <hr class="gp-rule">
-          <div class="dv-list-label">${esc(p.listLabel || 'In this part')}</div>
+          <div class="dv-list-label">${esc(p.listLabel || L.inThisPart)}</div>
           <ol class="dv-list">
             ${items}
           </ol>
@@ -255,7 +266,7 @@ const tocPart = (p, i) => {
   const rows = p.titles.map((t) =>
     `<div class="toc-row"><span class="nm">${esc(t)}</span><span class="pg">${pageOf[t]}</span></div>`).join('\n            ');
   return `<div class="toc-part">
-            <div class="toc-ph"><span class="pn">Part ${i + 1} · ${esc(p.name)}</span><span class="pg">${partPageOf.get(i)}</span></div>
+            <div class="toc-ph"><span class="pn">${esc(partPrefixLabel(i + 1, p.name))}</span><span class="pg">${partPageOf.get(i)}</span></div>
             ${rows}
           </div>`;
 };
@@ -274,7 +285,7 @@ const listPage = (cls, label, inner, withTitle) => `    <section class="sheet gp
     </section>`;
 
 const contentsSections = tocBins.map((bin, i) =>
-  listPage('toc', 'Contents',
+  listPage('toc', L.contents,
     `<div class="toc-list">\n          ${bin.map((p) => tocPart(p, parts.indexOf(p))).join('\n          ')}\n        </div>`,
     i === 0));
 
@@ -286,7 +297,7 @@ for (let i = 0; i < indexPages; i++) {
   const rows = alpha.slice(i * perIndexPage, (i + 1) * perIndexPage)
     .map((t) => `<div class="idx-row"><span class="nm">${esc(t)}</span><span class="pg">${pageOf[t]}</span></div>`)
     .join('\n            ');
-  indexSections.push(listPage('index', 'Index',
+  indexSections.push(listPage('index', L.index,
     `<div class="idx">\n            ${rows}\n          </div>`, i === 0));
 }
 

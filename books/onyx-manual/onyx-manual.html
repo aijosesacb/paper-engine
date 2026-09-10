@@ -1,0 +1,76 @@
+<!doctype html>
+<!--
+  THE INTERIOR — source of Manual da Acompanhante.
+
+  One <section class="sheet bb"> per ficha. Cover, copyright, contents and
+  part dividers are generated into book.html by:
+
+    node engine/tools/build-book.mjs books/onyx-manual
+
+  Never hand-edit book.html.
+
+  The 7 fichas of the Funil 1 isco are listed in blocks.md. They are not in
+  this file until José gives the take for each one. Do not invent them.
+-->
+<html lang="pt" data-size="b5">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual da Acompanhante</title>
+  <link rel="stylesheet" href="../../engine/sheet.css">
+  <link rel="stylesheet" href="../../engine/sizes/b5.css">
+  <link rel="stylesheet" href="../../engine/themes/studio.css">
+</head>
+<body>
+  <main class="deck">
+
+    <section class="sheet bb">
+      <h2 class="sr">Página de entrada: o PDF são fichas, não um livro para ler de uma vez. Pedes, lês uma, fazes a caixa de acção, passas à seguinte.</h2>
+      <div class="tab"></div>
+      <div class="top">
+        <div class="eyebrow"><b>Manual da Acompanhante</b></div>
+        <span class="pill">Como ler</span>
+      </div>
+      <h1 class="title">Como usar este manual</h1>
+      <div class="sub">Uma ficha, uma acção, a seguinte</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama: três passos. Pedir o PDF, ler uma ficha, fazer a acção. Depois a seguinte.">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+            <filter id="cs" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/></filter>
+          </defs>
+          <rect x="8" y="48" width="168" height="88" rx="13" fill="#FFFFFF" stroke="#E7E9EF" stroke-width="1" filter="url(#cs)"/>
+          <text x="92" y="84" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;fill:#1A1A2E">Pediste o PDF</text>
+          <text x="92" y="106" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:11px;fill:#5B6472">está no telemóvel</text>
+          <rect x="212" y="48" width="168" height="88" rx="13" fill="#FFFFFF" stroke="#E7E9EF" stroke-width="1" filter="url(#cs)"/>
+          <text x="296" y="84" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;fill:#6366F1">Lês uma ficha</text>
+          <text x="296" y="106" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:11px;fill:#5B6472">a que te está a doer</text>
+          <rect x="416" y="48" width="168" height="88" rx="13" fill="#F0FDFA" stroke="#99F6E4" stroke-width="1" filter="url(#cs)"/>
+          <text x="500" y="84" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;fill:#0D9488">Fazes a caixa</text>
+          <text x="500" y="106" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:11px;fill:#5B6472">depois a ficha seguinte</text>
+          <line x1="176" y1="92" x2="212" y2="92" stroke="#94A3B8" stroke-width="1.75" marker-end="url(#ar)"/>
+          <line x1="380" y1="92" x2="416" y2="92" stroke="#94A3B8" stroke-width="1.75" marker-end="url(#ar)"/>
+          <circle cx="92" cy="36" r="11" fill="#6366F1"/><text x="92" y="36" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;fill:#FFFFFF">1</text>
+          <circle cx="296" cy="36" r="11" fill="#6366F1"/><text x="296" y="36" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;fill:#FFFFFF">2</text>
+          <circle cx="500" cy="36" r="11" fill="#0D9488"/><text x="500" y="36" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;fill:#FFFFFF">3</text>
+          <text x="296" y="176" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:12.5px;fill:#5B6472">1 pediste · 2 lês uma · 3 fazes a caixa, depois a ficha seguinte</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Digamos que o PDF chegou ao WhatsApp e estás a pensar ler isto como um livro. <span class="bad">Não é isso.</span> São fichas. Uma ideia por página, uma coisa para fazeres hoje, e passas à seguinte.</p>
+        <p>Se uma ficha não é o teu problema esta semana, <strong>saldas</strong>. A que te está a custar dinheiro (foto, texto, curiosos, preço, número pessoal, republicar) é a que conta.</p>
+        <p class="close">Não precisas de mais páginas. Precisas de uma acção.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">FAZ ISTO HOJE</span>
+        <p>Abre o índice. Marca a ficha que te está a custar dinheiro agora. Lê só essa. Faz a caixa. Só depois a seguinte.</p>
+      </div>
+      <div class="foot"><span class="brand">joserosa.online</span><span class="pg"></span><span class="series">As sete fichas</span></div>
+    </section>
+
+  </main>
+  <script src="../../engine/sheet-tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "title": "Manual da Acompanhante",
+  "subtitle": "Sete fichas para montar um anúncio sem queimar o valor nem a discrição.",
+  "author": "José Rosa",
+
+  "series": "Manual da Acompanhante",
+  "brand": "joserosa.online",
+  "editionLabel": "Edição 0.1 — rascunho",
+  "unit": "fichas",
+  "unitSingular": "ficha",
+
+  "numbered": true,
+  "contents": true,
+  "index": false,
+
+  "accent": "#7A1F3D",
+  "accentStrong": "#5C1730",
+
+  "cover": {
+    "kicker": "Grátis · 18+",
+    "note": "Uma ideia por página. Não é um livro de auto-ajuda."
+  },
+  "copyright": {
+    "year": 2026,
+    "rights": "© 2026 José Rosa. Todos os direitos reservados. 18+.",
+    "lines": [
+      "Uso pessoal. Não republicar, não revender.",
+      "Composto em Space Grotesk, Inter e JetBrains Mono."
+    ]
+  },
+
+  "labels": {
+    "contents": "Índice",
+    "index": "Índice alfabético",
+    "partOf": "Parte {n} de {total}",
+    "partPrefix": "Parte",
+    "inThisPart": "Nesta parte"
+  },
+
+  "parts": [
+    {
+      "name": "As sete fichas",
+      "eyebrow": "O que levas",
+      "why": "Uma ficha, um problema. Lês, fazes, passas à seguinte.",
+      "listLabel": "Nesta parte",
+      "blocks": ["Como usar este manual"]
+    }
+  ]
+}
